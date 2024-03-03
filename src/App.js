@@ -4,6 +4,7 @@ import Square from "./Square/Square";
 import { io } from "socket.io-client";
 import Swal from "sweetalert2";
 import Spinner from "./Spinner";
+import Confetti from 'react-confetti';
 
 const renderFrom = [
   [1, 2, 3],
@@ -21,6 +22,7 @@ const App = () => {
   const [playerName, setPlayerName] = useState("");
   const [opponentName, setOpponentName] = useState(null);
   const [playingAs, setPlayingAs] = useState(null);
+  
 
   const checkWinner = () => {
     // row dynamic
@@ -30,7 +32,7 @@ const App = () => {
         gameState[row][1] === gameState[row][2]
       ) {
         setFinishedArrayState([row * 3 + 0, row * 3 + 1, row * 3 + 2]);
-        return gameState[row][0];
+        return gameState[row][0]; 
       }
     }
 
@@ -207,6 +209,8 @@ const App = () => {
           finishedState !== "opponentLeftMatch" &&
           finishedState !== "draw" && (
             <h3 className="finished-state">
+          <Confetti/>
+
               {finishedState === playingAs ? "You " : opponentName} won the match <br/>
               <button className="btn" onClick={() => window.location.reload()}>Leave match</button>
             </h3>
