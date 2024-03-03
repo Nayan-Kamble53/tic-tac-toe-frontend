@@ -1,9 +1,14 @@
+const express = require('express');
+const app = express();
+const cors = require('cors');
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
+app.use(cors());
+
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors: "http://localhost:3000/",
+  cors: "http://localhost:3000",
 });
 
 const allUsers = {};
@@ -82,4 +87,4 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(3001);
+httpServer.listen(5000, () => 'Server is listening on port 5000');

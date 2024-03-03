@@ -132,7 +132,7 @@ const App = () => {
     const username = result.value;
     setPlayerName(username);
 
-    const newSocket = io("http://localhost:3001", {
+    const newSocket = io("http://localhost:5000", {
       autoConnect: true,
     });
 
