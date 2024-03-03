@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 5vh; */
+    flex-direction: column;
+    height: 100vh;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .playOnline {
+    font-weight: 700;
+    border: none;
+    background-color: #e4ca56;
+    font-size: 60px;
+    cursor: pointer;
+    /* margin-top: 40vh; */
+    padding: 6px 10px;
+    border-radius: 5px;
+    outline: none;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .water-background {
+    background-color: #4b495f;
   }
-}
+  
+  .game-heading {
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 40px;
+  }
+  
+  .square-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+  
+  .move-detection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+  }
+  
+  .finished-state {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .left,
+  .right {
+    height: 30px;
+    width: 120px;
+    background-color: red;
+    border-bottom-left-radius: 50px;
+    background-color: #4b495f;
+    border-top-right-radius: 50px;
+    padding-top: 7px;
+    font-size: 18px;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  
+  .waiting {
+    /* overflow: hidden; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 44px;
+    margin-bottom: -5%;
+  }
+  
+  .current-move-cross {
+    background-color: #3fa7f0 !important;
+  }
+  
+  .current-move-circle {
+    background-color: #dd7f9f !important;
+  }
+
+  .btn {
+    background: #e4ca56;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
