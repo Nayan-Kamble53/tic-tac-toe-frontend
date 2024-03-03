@@ -8,7 +8,7 @@ app.use(cors());
 
 const httpServer = createServer();
 const io = new Server(httpServer, {
-  cors: "http://localhost:3000",
+  cors: "https://nvk-tic-tac-toe-multi-player.vercel.app/",
 });
 
 const allUsers = {};
