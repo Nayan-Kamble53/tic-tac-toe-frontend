@@ -222,7 +222,7 @@ const App = () => {
           )}
       </div>
       {!finishedState && opponentName && (
-        <h2>You are playing against {opponentName}</h2>
+        <h2 className="finished-state">You are playing against {opponentName}</h2>
       )}
       {finishedState && finishedState === "opponentLeftMatch" && (
         <h3 className="finished-state">Opponent has left the match... <br/>
