@@ -225,7 +225,8 @@ const App = () => {
         <h2>You are playing against {opponentName}</h2>
       )}
       {finishedState && finishedState === "opponentLeftMatch" && (
-        <button className="btn" onClick={() => window.location.reload()}>Leave match</button>
+        <h3 className="finished-state">Opponent has left the match... <br/>
+        <button className="btn" onClick={() => window.location.reload()}>Leave match</button></h3>
       )}
     </div>
   );
